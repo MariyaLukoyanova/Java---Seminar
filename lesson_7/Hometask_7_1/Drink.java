@@ -1,32 +1,32 @@
 package lesson_7.Hometask_7_1;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Drink {
-    private String name;
-    private int volume;
+    protected String name;
+    protected int volume;
+
+    List<Drink> drink = new ArrayList<>();
+
+    Drink(String name, int volume) {
+        this.name = name;
+        this.volume = volume;
+        drink.add(this);
+    }
+
 
     public String getName() {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
+
     public int getVolume() {
         return volume;
     }
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-    
 
-    public ArrayList<Object> getProduct(String name, int volume) {
-        ArrayList<Object> finishProd = new ArrayList<>();
-        finishProd.add(name);
-        finishProd.add(volume);
-        return finishProd;
-        
+    public String toString() {
+        return String.format("%s, volume %d", name, volume);
+
     }
-    
-    
+
 }

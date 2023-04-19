@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Machine {
     List<Product> products = new ArrayList<Product>();
-    ;
 
     public Product getProductByName(String name) {
         for (Product product : products) {
